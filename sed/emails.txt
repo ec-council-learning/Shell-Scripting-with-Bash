@@ -1,0 +1,14 @@
+GOAL:
+ISOLATE THE PASSWORDS USING JUST ONE SED COMMAND
+And REMOVE ALL OTHER CHARS.
+
+========================================//       ==========
+HACKED By: : ///L5C4S\\\               =// 21/02/2015     =
+========================================// 02:24 ==========
+abarrene@umw.edu:antonio4
+abedur.rasul@yahoo.com:a1b1c1d1
+abellanger@gt.rr.com:mom7227691
+abby@emery.co.uk:maemae23
+abhayvc@hotmail.com:abhay190479
+abeandryan@centurytel.net:malachi1
+aaronsouthern@gmail.com:modem916
