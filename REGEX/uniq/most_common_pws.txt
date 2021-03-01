@@ -1,0 +1,28 @@
+
+Top 25 most common passwords by year according to SplashData
+Rank	2011 [6]	2012 [7]	2013 [8]	2014 [9]	2015 [10]	2016 [5]	2017 [11]	2018 [12]	2019 [13]
+1	password	password	123456	123456	123456	123456	123456	123456	123456
+2	123456	123456	password	password	password	password	password	password	123456789
+3	12345678	12345678	12345678	12345	12345678	12345	12345678	123456789	qwerty
+4	qwerty	abc123	qwerty	12345678	qwerty	12345678	qwerty	12345678	password
+5	abc123	qwerty	abc123	qwerty	12345	football	12345	12345	1234567
+6	monkey	monkey	123456789	123456789	123456789	qwerty	123456789	111111	12345678
+7	1234567	letmein	111111	1234	football	1234567890	letmein	1234567	12345
+8	letmein	dragon	1234567	baseball	1234	1234567	1234567	sunshine	iloveyou
+9	trustno1	111111	iloveyou	dragon	1234567	princess	football	qwerty	111111
+10	dragon	baseball	adobe123 [lower-alpha 1]	football	baseball	1234	iloveyou	iloveyou	123123
+11	baseball	iloveyou	123123	1234567	welcome	login	admin	princess	abc123
+12	111111	trustno1	admin	monkey	1234567890	welcome	welcome	admin	qwerty123
+13	iloveyou	1234567	1234567890	letmein	abc123	solo	monkey	welcome	1q2w3e4r
+14	master	sunshine	letmein	abc123	111111	abc123	login	666666	admin
+15	sunshine	master	photoshop [lower-alpha 1]	111111	1qaz2wsx	admin	abc123	abc123	qwertyuiop
+16	ashley	123123	1234	mustang	dragon	121212	starwars	football	654321
+17	bailey	welcome	monkey	access	master	flower	123123	123123	555555
+18	passw0rd	shadow	shadow	shadow	monkey	passw0rd	dragon	monkey	lovely
+19	shadow	ashley	sunshine	master	letmein	dragon	passw0rd	654321	7777777
+20	123123	football	12345	michael	login	sunshine	master	!@#$%^&*	welcome
+21	654321	jesus	password1	superman	princess	master	hello	charlie	888888
+22	superman	michael	princess	696969	qwertyuiop	hottie	freedom	aa123456	princess
+23	qazwsx	ninja	azerty	123123	solo	loveme	whatever	donald	dragon
+24	michael	mustang	trustno1	batman	passw0rd	zaq1zaq1	qazwsx	password1	password1
+25	Football	password1	000000	trustno1	starwars	password1	trustno1	qwerty123	123qwe
