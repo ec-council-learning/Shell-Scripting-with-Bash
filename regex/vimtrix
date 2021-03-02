@@ -1,7 +1,8 @@
-Vim shortcuts by Luke Smith
-	       
- 	       
+
+	       	       
  To Force Quit: 
+ 
+ :q!
  
  shift  Z  F
  
@@ -20,6 +21,3 @@ esc shift ZZ
 	       
 ------------------------------------------------
 
-https://www.youtube.com/watch?v=d8XtNXutVto&list=PL-p5XmQHB_JSTaEPygu1DZjuFfb704Uv7&index=3 
-
-kdjawkjvhnkaefjlvhnadflkvbj
