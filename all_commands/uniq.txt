@@ -1,0 +1,80 @@
+ 
+
+
+sort   (alphebetical)
+
+sort numerical value [option -n]
+
+
+--------------------------------------------------------
+
+
+The "nl" command is dedicated for adding line numbers to a file.
+cat -n file.txt
+
+nl file.txt > file2.txt
+
+or
+cat -n file.txt > newfile.txt
+
+
+edit a list of names
+head 50names.txt | nl | sort -n > file1.txt
+
+
+------------------------------------------------------------
+
+
+uniq --- > matching lines
+sort | uniq
+
+count dups
+uniq -c file.txt | less
+
+
+Listing Only Duplicate Lines
+uniq -d file.txt
+
+list all dupps 
+uniq -D sorted.txt | less
+
+-------------------------------------------------------------
+
+
+cut
+
+cutting bytes & specific byte(s)
+head 50 | cut -b 1
+
+& range 
+
+cut | -b 5-10
+
+
+Cut Text From Columns using Fields and Delimiters
+$ echo "Let's cut this input stream section by section" | cut -d ' ' -f 1,2,3
+
+
+Cut Range of Fields from the Input Stream
+$ echo "Let's cut this input stream section by section" | cut -d ' ' -f 1-5
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

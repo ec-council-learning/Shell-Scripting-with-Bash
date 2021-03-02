@@ -1,0 +1,42 @@
+Linux CMDS VID 2
+
+
+THE THREE AREAS:
+network
+cp
+mv
+
+
+NETWORK RELATED
+ifconfig  
+netstat -tulpn
+netstat -ant
+watch ss -tp  (ntwrk conns)
+netstat -tulpn  conns with PIDs
+
+
+
+
+COPY
+cp file1.txt   file_cpy.txt  <---- copy in place
+cp -r filei.txt /root        <-----copy to another location
+
+MOVE
+change the file name
+mv file1.txt f1.txt
+
+moving files around:
+mv file1.txt -t Documents
+
+
+
+---------------------------------
+
+Vid 3
+
+regex and wildcards
+
+----------------------------------
+vid 4
+
+scripting

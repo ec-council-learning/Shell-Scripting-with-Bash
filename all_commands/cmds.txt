@@ -1,0 +1,258 @@
+
+-------------------------------------------------------------------
+Linux Basic and frequently used commands
+--------------------------------------------------------------------
+
+Basics & essentials 
+Navigating the CMD Line
+
+pwd
+id
+whoami
+ls
+ls -l
+cd 
+cd ..
+
+man (using the manual pages)
+
+-------------------------------------------------------------------------
+
+USER RELATED & HISTORY
+env
+$PATH  ( is an enviroment variable. It controlls the cmd search path and list vof dirs)
+history
+
+
+----------------------------------------------------------------------
+
+VIEWING FILES using TEXT EDITORS and more
+file
+cat
+head
+tail
+less
+
+vim
+gedit
+
+echo (print something to the screen)
+
+-----------------------------------------------------------
+
+COPYING MOVING DELETING Files&Dirs
+cp -r     (copy a file recursively)
+mv         (to rename) 
+mv fielname  -t (new location)
+mkdir
+rm
+rm -rf
+
+-----------------------------------------------------------
+
+PACKAGE MANAGEMENT
+apt update
+apt install
+
+apt update && apt upgrade
+
+dpkg
+sudo dpkg -i nameofdebfile.deb
+
+------------------------------------------------------
+
+SOFTWARE/ HARDWARE 
+uname -a
+lshw
+df -ah
+df -h
+du -h
+-------------------------------------------------------------
+
+NETWORK RELATED
+ifconfig  (ipconfig)
+netstat -tulpn
+service smbd restart && dhclient
+netstat -ant
+watch ss -tp  (ntwrk conns)
+netstat -tulpn  conns with PIDs
+-------------------------------------------------------------
+END OF LESSON ONE
+END OF LESSON ONE
+END OF LESSON ONE
+
+
+
+------------------------------------------------------------
+
+END OF LESSON ONE
+
+-------------------------------------------------------------
+
+END OF LESSON ONE
+
+END OF LESSON ONE
+
+END OF LESSON ONE
+
+END OF LESSON ONE
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+
+BEGIN LESSON 2
+
+-----------------------------------------------------------
+
+WORKING WITH TEXT - INPUT OUTPUT
+
+
+cat > test1.txt
+
+Redirect Contents of a Single File
+cat test1.txt > test2.txt
+
+Redirect Contents of Multiple Files
+cat test1.txt test2.txt test3.txt test4.txt > allfiles.txt  (or > /allfiles.txt)
+
+append
+cat test1.txt >> test3.txt
+
+Append Text to Existing File
+cat >> test1.txt
+
+append multiple files to the end of an existing file:
+cat test2.txt test1.txt >> test4.txt
+
+
+concatentating
+cat file
+also
+cat file1.txt file2.txt allfiles.txt
+
+
+
+
+
+PROCESSES
+ps -ef
+top htop
+kill (pid)
+lsof -i
+sytemctl status
+
+
+USER MANAGEMENT
+useradd
+rmuser
+passwd
+
+------------------------------------------
+
+SINCE THE REST OF THIS COURSE ENTAILS HEAVY USE OF VIM
+I'M GOING TO DEDICATE THIS VIDEO AS A HOW TO
+& IF THE LINUX CMD LINE IS SOMETHING YOU PLAN ON USING, THEN
+VIM IS ESSENTIAL 
+
+It makes u more effeciant bc u dont have to take your hands off the keyboard
+
+------------------------------------------------
+
+
+
+
+
+
+---------------------------------------------------------
+
+WORKING WITH TEXT - ADVANCED
+REGULAR EXPRESSIONS
+
+do more advanced text manipulation: bashtrix
+
+align width
+$ nl -w2 file.txt
+
+https://github.com/LinuxUser255/Bash_Scripting/blob/master/bashtrix.txt
+
+
+
+grep
+awk
+sed
+
+-----------------------------------------------------------
+
+
+
+END LESSON 2
+
+
+--------------------------------------------------------
+
+
+STOP
+
+
+
+
+STOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tar stuff
+create a tar
+tar cf file.tar files
+
+extract tarfiles
+tar xf file.tar
+tar xjf   file.tar.bz2
+tar xvfz  file.tar.gz
+
+
+compression:
+gzip file
+
+decompress:
+gunzip
+or
+gzip -d
+
+
+
+UN-TARING & UNZIPING FILES
+tar  xf, cf, czf, xzf
+xdg-open (open a PDF)
+
+
+---------------------------------------------------------------------------------
+BASICS of BASH SCRIPTING:
+*STRINGS
+*Variables
+*Conditionals: (if-then, else-if, nested ifs),
+*LOOPS:
+    For Loops and While Loops, 
+*Boolean Operators
+*Iput/Output, Functions 
+*Parsing  output $ more.

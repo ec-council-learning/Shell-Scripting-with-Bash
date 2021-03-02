@@ -1,0 +1,48 @@
+vimtutor
+
+
+To save and exit: you have two options
+
+:wq
+
+ -or- 
+
+Hold shift + zz 
+
+
+To quit without saving:
+
+:q!
+
+COPY - PASTE
+
+1. Place the cursor infront of what you want to paste
+
+2. enter Visual mode
+
+3. using the -> highlight the text
+
+4. hit y  to copy
+
+5. scroll to where you want to paste the text
+
+6. make sure you are in Visual mode and hit p
+
+(if you need to go into Insert mode to navigate to the location, just be sure to return to Visual before pasting)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

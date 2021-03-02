@@ -1,0 +1,161 @@
+ 
+
+ How To Add Line Numbers To Text Files On Linux
+
+The "nl" command is dedicated for adding line numbers to a file.
+cat -n file.txt
+
+nl file.txt > file2.txt
+
+or
+cat -n file.txt > newfile.txt
+
+
+align width
+$ nl -w2 file.txt
+
+
+REGEX
+REGULAR EXPRESSIONS - GREP
+
+. any one char
+* match any number of previous (also 0)
++  match any number of previous
+$ end of line
+^ beginning of line
+\S any non-whitespace char
+\s any white-space char
+? optional
+[a-z] any lower case letter
+[A-Z] any UPPER CASE letter
+\ escape something
+[A-Za-Z] any letter regardless of caps
+[0-9] any number
+
+GREP:
+
+grep -i keywrd  file.txt
+
+grep -i "ab" names.txt
+
+grep "a" n2
+grep "a$" n2
+grep "^e" n2
+grep ".k" n2
+grep ".u*" n2
+igrep "zz" n2
+grep ".zz" n2
+grep ".*zz" n2
+grep ".*al" n2
+grep "\s*aa" n2
+grep "^\s*xy" n2
+ 
+ 
+#Remove all blank lines
+egrep -v "^[[:space:]]*$" old.txt > new.txt 
+
+---------------------------------------------------------------
+ 
+AWK
+
+select a particular field and print it:
+awk '{print $0}' file.txt
+ 
+ PATTERN MATCH REGEX:
+ awk '/@/ && /mail/' emails.txt
+ 
+ awk '/@/ && /mail/ {print $4}' emails.txt
+ 
+ 
+# Assign a starting line to begin displaying text:
+awk 'BEGIN{i=5} /.*/{printf "%d.% s\n",i,$0; i++}' file.txt
+
+# Remove duplicates
+awk '!(count[$0]++)' old.txt > new.txt
+ 
+# Sort by length
+awk '{print length, $0}' old.txt | sort -n | cut -d " " -f2- > new.txt
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ -------------------------------------------------------------------------------------------------
+ AWK & SED examples
+ 
+ 
+ 
+ In the directory:
+ debian@debian:~/shell/emails_copy$
+ 
+ GOAL:
+ISOLATE THE PASSWORDS WITH JUST ONE COMMAND, USING ANY COMBO OF AWK & SED
+And REMOVE ALL OTHER CHARS.
+
+========================================//       ==========
+HACKED By: : ///L5C4S\\\               =// 21/02/2015     =
+========================================// 02:24 ==========
+abarrene@umw.edu:antonio4
+abedur.rasul@yahoo.com:a1b1c1d1
+abellanger@gt.rr.com:mom7227691
+abby@emery.co.uk:maemae23
+abhayvc@hotmail.com:abhay190479
+abeandryan@centurytel.net:malachi1
+aaronsouthern@gmail.com:modem916
+
+
+
+awk '{print $1}' emsandpws.txt | sed "s/=.*//g;s/\S*://g;s/HACKED.*//g; /^$/ d"
+
+ ----------------------------------------------------------------------------------------------------------
+
+
+ 
+ Clean up this email list using awk and sed
+ 
+ rw-r--r-- 1 debian debian   3737 Dec 18 05:41 pwlist.txt
+debian@debian:~/shell/emails_copy$ cat 12heads.txt
+# # # # # # # # # # # # # #
+#  Hacked by Sniper Cmd   #
+#     Hack Emails ^_^     #
+# # # # # # # # # # # # # #
+
+
+nghquy@bxytyz.com
+mkarmin@bezeqint.net
+shuzik83@yahoo.com
+wind.golan@gmail.com
+zamirz@012.net.il
+f5mztlk3kq@hotmail.com
+
+
+
+awk '{print $1}' 12heads.txt | sed "s/#.*//g;s/\S*://g; /^$/ d"
+ 
+ 
+ 
+ 
