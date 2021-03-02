@@ -1,0 +1,48 @@
+REGULAR EXPRESSIONS - GREP
+
+. any one char
+* match any number of previous (also 0)
++  match any number of previous
+$ end of line
+^ beginning of line
+\S any non-whitespace char
+\s any white-space char
+? optional
+[a-z] any lower case letter
+[A-Z] any UPPER CASE letter
+\ escape something
+[A-Za-Z] any letter regardless of caps
+[0-9] any number
+-----------------------------------------------------------
+exe:
+
+grep "o" n2
+grep "o$" n2
+grep "^e" n2
+grep ".c" n2
+grep ".c*" n2
+igrep "oo" n2
+grep ".oo" n2
+grep ".*oo" n2
+grep ".*ol" n2
+grep "\s*oo" n2
+grep "^\s*ad" n2
+
+grep "http" urls.txt
+grep "\http\." u
+grep "http:\?" u
+grep "http\://\S*" u
+grep "http\://\S*\.[a-z]" u
+grep "http\://\S*\.[a-z]\+\S*" u
+
+----------------------------------------------
+GREPPING EMAILS
+
+grep "\S\+@\S\+\.[A-Za-z]\+" emails.txt
+grep "\S\+@\S\+\.[A-Za-z]\+" emails.txt
+ 
+----------------------------------------------------------------
+AWK
+
+awk '{print $4}' emails.txt
+

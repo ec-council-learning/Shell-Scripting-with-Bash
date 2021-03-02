@@ -1,0 +1,140 @@
+======================================
+REGULAR EXPRESSIONS with GREP & AWK
+======================================
+
+. any one char
+* match any number of previous (also 0)
++  match any number of previous
+$ end of line
+^ beginning of line
+\S any non-whitespace char
+\s any white-space char
+? optional
+[a-z] any lower case letter
+[A-Z] any UPPER CASE letter
+\ escape something
+[A-Za-Z] any letter regardless of caps
+[0-9] any number
+-----------------------------------------------------------
+exe:
+
+grep "a" n2
+grep "a$" n2
+grep "^a" n2
+grep ".c" n2
+grep ".c*" n2
+igrep "oo" n2
+grep ".oo" n2
+grep ".*oo" n2
+grep ".*ol" n2
+grep "\s*oo" n2
+grep "^\s*ad" n2
+
+grep "http" urls.txt
+grep "\http\." u
+grep "http:\?" u
+grep "http\://\S*" u
+grep "http\://\S*\.[a-z]" u
+grep "http\://\S*\.[a-z]\+\S*" u
+
+=======================================
+GREPPING EMAILS
+=======================================
+
+grep "\S\+@\S\+\.[A-Za-z]\+" emails.txt
+grep "\S\+@\S\+\.[A-Za-z]\+" emails.txt
+ 
+
+-------------------------------------------------------------
+
+# RANDOM AWKing of EMAILS
+-------------------------------------------------------------
+[15:26:30] [INFO] retrieved: "2009-02-20","15","info@kerala.com","nrmjaoao"
+[15:26:32] [INFO] retrieved: "2009-02-27","16","3@3.com","zradxntn"
+[15:26:34] [INFO] retrieved: "2009-02-27","17","adasdasd@fsdfsd.com","cxyklzbf"
+[15:26:37] [INFO] retrieved: "2009-02-27","18","eqweqwe@213.com","vslfbpwh"
+[15:26:39] [INFO] retrieved: "2009-02-27","19","dasdasd@hjgjdf.com","zdlmcjlf"
+[15:26:41] [INFO] retrieved: "2009-03-06","20","dfgdfg@gfsmf.com","lyprtjwf"
+[15:26:43] [INFO] retrieved: "2009-03-06","21","qweqw","aleycazw"
+[15:26:46] [INFO] retrieved: "2009-03-06","22","qweqweq","rtrwxlxt"
+[15:26:49] [INFO] retrieved: "2009-03-06","23","qeqweqwe","svckcodp"
+[15:26:54] [INFO] retrieved: "2009-03-07","24","werw","euyxxjnw"
+----------------------------------------------------------------------------
+#Parse and clean the file above:
+(awk ' /@/ && /.com/ {print $4}' emails_unedit.txt | tr -d '2009' | tr -d '1-8' | tr -d '-' | tr -d ',,'\")
+
+----------------------------------------------------------------------------------------------------------------------------
+Random CMDS:
+head emails.txt
+
+sed 11q emails.txt
+
+awk '(NR>=0 && NR<=11){print} (NR==11){exit}' emails.txt
+
+grep -i 'www' emails.txt
+
+sed'[Qq]we /!q' e
+
+awk 'tolower($0) ~ /qweq/' e
+
+awk '$3 > 0 {print $1, $2 * $3 }' em2
+
+awk '$3 > 0' em2
+
+-----------------------------------
+REG EXPRESSIONS USING AWK
+----------------------------------------------------------------
+!The REGEXP is specified within // and by default acts upon $0
+---------------------------------------------------------------
+
+awk '/@/ && /mail/ {print $4}' emails.txt
+
+awk '/@/ && !/www/ {print $4}' emails.txt
+
+awk -i '/^[LK]/' em2
+
+awk '/^[Ll Kk]/' em2
+
+awk '/6/{print $NF}' em2
+
+=======================================================================
+
+Parse & or edit this file in the command line:
+-----------------------------------------------
+Rank	2011[6]	2012[7]	2013[8]	2014[9]	2015[10]	2016[5]	2017[11]	2018[12]	2019[13]
+1	password	password	123456	123456	123456	123456	123456	123456	123456
+2	123456	123456	password	password	password	password	password	password	123456789
+3	12345678	12345678	12345678	12345	12345678	12345	12345678	123456789	qwerty
+4	qwerty	abc123	qwerty	12345678	qwerty	12345678	qwerty	12345678	password
+5	abc123	qwerty	abc123	qwerty	12345	football	12345	12345	1234567
+6	monkey	monkey	123456789	123456789	123456789	qwerty	123456789	111111	12345678
+7	1234567	letmein	111111	1234	football	1234567890	letmein	1234567	12345
+8	letmein	dragon	1234567	baseball	1234	1234567	1234567	sunshine	iloveyou
+9	trustno1	111111	iloveyou	dragon	1234567	princess	football	qwerty	111111
+--------------------------------------------------------------------------------
+
+The following produce an orderly output:
+awk '{$1="";print}' common_pws.txt
+awk '{for(i=2;i<=NF;i++){printf "%s ", $i}; printf "\n"}' common_pws.txt
+awk '{for(i=2;i<=NF;i++){printf "%s ", $i}; printf "\n\n"}' common_pws.txt
+----------------------------------------------------------------------------------
+
+
+Notes:
+--------------------------------------------------------------------------------------
+# will print all but very first column:
+# B/C 1st Colum equals a blank space
+awk '{$1="";print}' common_pws.txt
+
+#will print all but first two columns:
+awk '{$1= $2=""; print $0}' 
+
+# Use a for loop and the printf statement:
+%s is one of various modifiers available to printf and similar formatting programs. 
+#It represents a 'word' or a string between white spaces.
+awk '{for(i=2;i<=NF;i++){printf "%s ", $i}; printf "\n"}' common_pws.txt
+
+# The command above loops through, printing all fields starting from the second to the last (repped by $NF, (NEW FIELD))
+#And to add extra space between all words, add an additional \n
+awk '{for(i=2;i<=NF;i++){printf "%s ", $i}; printf "\n\n"}' common_pws.txt
+

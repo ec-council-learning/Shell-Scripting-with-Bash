@@ -1,0 +1,40 @@
+ awk '{print $4}' emails.txt
+
+awk '/@/ && /mail/ {print $4}' emails.txt
+
+(awk '/@/ && /mail/ {print $4}' emails.txt | tr -d \") 
+
+(awk '/@/ && /mail/ {print $4}' emails1 | tr -d '2009' | tr -d '7' | tr -d '1-8' | tr -d \")
+
+  (cat testclean | tr -d '-' | tr -d '...' | tr -d ',,')
+
+-------------------------------------------------------------------------------------------------
+
+THIS DID IT
+
+awk '/@/ {print $4}' emails.txt | tr -d '2009' | tr -d '1-8' | tr -d '-' | tr -d ',' | tr -d '"' | tr -d '...' > emails2.txt
+
+----------------------------------------------------------------------------------------------------------------------------
+
+head emails.txt
+
+sed 11q emails.txt
+
+awk '(NR>=0 && NR<=11){print} (NR==11){exit}' emails.txt
+
+grep -i 'www' emails.txt
+
+sed'[Qq]we /!q' e
+
+awk 'tolower($0) ~ /qweq/' e
+
+awk '$3 > 0 {print $1, $2 * $3 }' em2
+
+awk '$3 > 0' em2
+
+awk '{print NF}' em2   NF number of fields
+
+ awk '{print NF, $NF}' em2
+
+
+
