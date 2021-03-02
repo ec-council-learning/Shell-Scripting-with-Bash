@@ -1,0 +1,53 @@
+
+
+* 0 or more chars could be begin or end of the word
+
+*d* anything wit a in it
+
+[] is OR betweeen a range of characters 
+
+[dc]*
+
+? must be 1 or more chars at the start 
+
+?*d     one char infront. then followed by zero or more (a)
+        must be at least one char infront of the A
+            
+
+!    ls [!ad]* negate the a or b
+
+ls *[[:upper:]]*    search for just upper
+ls *[[:digit:]]*    search for just digits
+ls *[[:punct:]]*    search for chars with punctuation
+
+--------------------------------------------------------------------------------
+
+
+  476  ls
+  477  ls *
+  478  ls *d*
+  479  ls [ad]*
+  481  ls [!tr]*
+       ls [0-9]*
+  483  ls *[[:upper:]]*
+       ls *[[:lower:]]*
+  484  ls *[[:digit:]]*
+  485  ls *[[:punct:]]*
+       
+      rm d* remove all fiels begining with d
+      rm *d* remove all files with d
+      rm .txt*  remove all .txt files
+    
+    run touch.sh again
+
+    then
+
+    cp -r f* ..     copy everything with f  back one dir
+    
+    ! CAREFULL !
+
+    REMOVE EVERYTHING
+
+    rm *
+
+
