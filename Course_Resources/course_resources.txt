@@ -1,0 +1,27 @@
+
+Debian's main website
+https://www.debian.org/
+
+Debian Linux iso download
+https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current-live/amd64/iso-hybrid/
+
+Virtual Box Hypervisor
+https://www.virtualbox.org/
+
+Virtual Box Extension Pack.
+The extension pack is not absolutely necessary, though it can be helpful if you want to code along when mounting external devices to a VM.
+https://phoenixnap.com/kb/install-virtualbox-extension-pack
+
+Vim tips
+https://vim.fandom.com/wiki/Copy,_cut_and_paste
+
+Basic Vimrc file
+https://vim.fandom.com/wiki/Example_vimrc
+
+The ultimate Vimrc
+https://github.com/amix/vimrc
+in the command line do:
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+
