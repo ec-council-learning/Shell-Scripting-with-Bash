@@ -1,0 +1,28 @@
+#!/bin/bash
+
+while_func() {
+n=1
+
+while [ $n -lt 30 ]
+do
+    echo n is now ${n}
+    (( n++ ))
+    sleep 0.05
+
+if [[ ${n} -eq 16 ]]
+then
+    break
+
+fi
+done
+
+}
+
+while_func
+while_func
+while_func
+while_func
+
+
+
+

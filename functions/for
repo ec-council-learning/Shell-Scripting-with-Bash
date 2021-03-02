@@ -1,0 +1,21 @@
+#!/bin/bash
+
+def_for() {
+
+for i in {1..100}
+do
+    sleep 0.05
+if [[ $i -gt 25 ]]
+then
+    break
+
+fi
+echo "$i"
+
+done
+
+}
+
+def_for
+def_for
+def_for
