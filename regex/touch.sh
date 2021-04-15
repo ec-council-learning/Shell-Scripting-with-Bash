@@ -1,5 +1,7 @@
 #!/bin/bash
 
+touch file{1..9}.txt
+
 touch README.md
 touch requirements.txt
 touch MAKE
