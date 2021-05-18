@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# Instantly Create & chmod either a Python or Bash file/script
-# Make sure the script is being executed with sudo privileges.
+#By utilizing  the touch, chmod, echo, and vim commands, in that order, this Bash script enables the user 
+#to instantly create, open and make an executable Python or Bash file. 
+#This bypasses the hassle of manually opening vim, 
+#typing the interpreter (#!/usr/bin/env python3) or (#!/bin/bash), saving , exiting then chmoding it.
+
+# First make sure the script is being executed with sudo privileges.
 if [[ "${UID}" -ne 0 ]]
 then
    echo 'Please run with sudo or as root.'
