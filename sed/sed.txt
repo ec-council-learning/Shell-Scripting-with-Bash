@@ -33,7 +33,10 @@ sed "s/cC/g" file.txt
 # This command will remove every # 
 sed "s/#.*//g" file
 
-to remove spaces
+# Add spaces:
+sed 's/$/\n/'
+
+# Remove spaces
 sed "s/\s*#.*//g" file.txt
 
 You can concatonate sed s
