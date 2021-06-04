@@ -1,6 +1,9 @@
 ===============================================================================
 Important go-to AWK and GREP commands for removing duplicates and blank lines:
 ===============================================================================
+# Add spaces between lines:
+sed 's/$/\n/'
+
 
 #Remove all blank lines
 egrep -v "^[[:space:]]*$" old.txt > new.txt
